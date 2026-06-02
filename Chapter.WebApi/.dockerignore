@@ -1,0 +1,10 @@
+bin/
+obj/
+.vs/
+.git/
+**/DevCache/
+**/nuget-packages/
+NuGet.Config
+nuget.config
+D:
+D*/

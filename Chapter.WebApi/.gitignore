@@ -1,0 +1,12 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# Build redirecionado para D:\DevCache\build (nao versionar)
+# NuGet local do projeto ja aponta para D:\DevCache\nuget-packages
+# Pasta espuria criada por mount Docker (D:/DevCache dentro do projeto)
+D*/
+**/DevCache/
+**/nuget-packages/

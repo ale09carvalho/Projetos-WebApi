@@ -1,0 +1,7 @@
+<Project>
+  <!-- Somente no Windows: artefatos em D:\DevCache. No Docker/Linux usa obj/bin do projeto (também em D: via volume). -->
+  <PropertyGroup Condition="'$(OS)' == 'Windows_NT'">
+    <BaseOutputPath>D:\DevCache\build\$(MSBuildProjectName)\bin\</BaseOutputPath>
+    <BaseIntermediateOutputPath>D:\DevCache\build\$(MSBuildProjectName)\obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+</Project>

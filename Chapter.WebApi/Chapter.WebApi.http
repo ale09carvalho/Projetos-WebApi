@@ -1,0 +1,11 @@
+@Chapter.WebApi_HostAddress = http://localhost:7028
+
+GET {{Chapter.WebApi_HostAddress}}/api/livros
+Accept: application/json
+
+###
+
+GET {{Chapter.WebApi_HostAddress}}/api/livros/1
+Accept: application/json
+
+###

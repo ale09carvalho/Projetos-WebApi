@@ -1,0 +1,11 @@
+# API em .NET 6. O SQL Server já deve estar rodando (container sqlserver na porta 1433).
+services:
+  api:
+    build: .
+    ports:
+      - "7028:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Chapter: "Server=host.docker.internal,1433;Database=Chapter;User Id=sa;Password=@Admin123;TrustServerCertificate=True;"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
