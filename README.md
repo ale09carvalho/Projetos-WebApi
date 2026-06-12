@@ -6,6 +6,7 @@ Repositório com duas APIs .NET:
 |-------|-----------|
 | **Atividade-03** | API Exo (projetos) |
 | **Chapter.WebApi** | API Chapter |
+| **Atividade-04** | API Exo (CRUD projetos) |
 
 ## Como rodar
 
