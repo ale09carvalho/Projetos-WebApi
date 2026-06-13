@@ -1,0 +1,88 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-06-13T00:00:00.000Z",
+  "__export_source": "insomnia.desktop.app",
+  "resources": [
+    {
+      "_id": "wrk_exoapi",
+      "_type": "workspace",
+      "name": "ExoApi - Atividade 06",
+      "description": "Coleção com HTTP (sem SSL) para testes locais"
+    },
+    {
+      "_id": "env_base",
+      "_type": "environment",
+      "parentId": "wrk_exoapi",
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:5038",
+        "token": ""
+      }
+    },
+    {
+      "_id": "req_login",
+      "_type": "request",
+      "parentId": "wrk_exoapi",
+      "name": "Login (POST)",
+      "method": "POST",
+      "url": "{{ _.base_url }}/api/usuarios",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"email\": \"email@sp.br\",\n  \"senha\": \"1234\"\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global"
+    },
+    {
+      "_id": "req_put",
+      "_type": "request",
+      "parentId": "wrk_exoapi",
+      "name": "Atualizar usuário (PUT)",
+      "method": "PUT",
+      "url": "{{ _.base_url }}/api/usuarios/2",
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"email\": \"email@sp.br\",\n  \"senha\": \"aaaaa1234\"\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ]
+    },
+    {
+      "_id": "req_delete",
+      "_type": "request",
+      "parentId": "wrk_exoapi",
+      "name": "Deletar usuário (DELETE)",
+      "method": "DELETE",
+      "url": "{{ _.base_url }}/api/usuarios/2",
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      }
+    },
+    {
+      "_id": "req_listar",
+      "_type": "request",
+      "parentId": "wrk_exoapi",
+      "name": "Listar usuários (GET)",
+      "method": "GET",
+      "url": "{{ _.base_url }}/api/usuarios"
+    }
+  ]
+}
