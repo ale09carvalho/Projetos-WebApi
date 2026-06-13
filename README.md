@@ -6,7 +6,8 @@ Repositório com APIs .NET do curso SENAI:
 |-------|-----------|
 | **Atividade-03** | API Exo (projetos) |
 | **Atividade-04** | API Exo (CRUD projetos) |
-| **Atividade_05** | API Exo (CRUD usuarios) |
+| **Atividade-05** | API Exo (CRUD usuarios) |
+| **Atividade-06** | API Exo (login JWT e autorização) |
 | **Chapter.WebApi** | API Chapter |
 
 ## Como rodar
